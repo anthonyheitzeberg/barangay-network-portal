@@ -1,3 +1,11 @@
+/* 
+  base.css
+  This file contains the base styles for the application.
+  It imports Tailwind CSS for utility-first styling.
+*/
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Additional base styles can be added below this comment */

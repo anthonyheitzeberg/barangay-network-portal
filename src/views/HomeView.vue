@@ -1,5 +1,7 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import ActualBoxes from '@/components/test/ActualBoxes.vue'
+</script>
 
 <template>
-  <main></main>
+  <ActualBoxes />
 </template>

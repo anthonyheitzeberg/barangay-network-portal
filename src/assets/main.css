@@ -1,35 +1,27 @@
+/* 
+  main.css
+  This file serves as the main stylesheet for the project. 
+  It imports the base styles defined in base.css. 
+  base.css, in turn, imports Tailwind CSS through the Tailwind directive.
+*/
+
 @import './base.css';
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+/* Additional custom styles can be added below this comment */
+html {
+  overflow-y: scroll; /* Always show the vertical scrollbar */
+  /* Optional: Adjust width to maintain layout */
+  scrollbar-width: thin; /* For Firefox */
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
-}
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }

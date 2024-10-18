@@ -1,49 +1,50 @@
+<script setup lang="ts">
+import { RouterView } from 'vue-router'
+import Navbar from './components/shared/Navbar.vue'
+</script>
+
 <template>
-  <div class="card grid grid-cols-1 md:grid-cols-2 gap-4">
-    <InputGroup>
-      <InputGroupAddon>
-        <i class="pi pi-user"></i>
-      </InputGroupAddon>
-      <InputText v-model="text1" placeholder="Username" />
-    </InputGroup>
+  <header>
+    <div class="wrapper">
+      <Navbar />
+    </div>
+  </header>
 
-    <InputGroup>
-      <InputGroupAddon>$</InputGroupAddon>
-      <InputNumber v-model="number" placeholder="Price" />
-      <InputGroupAddon>.00</InputGroupAddon>
-    </InputGroup>
-
-    <InputGroup>
-      <InputGroupAddon>www</InputGroupAddon>
-      <InputText v-model="text2" placeholder="Website" />
-    </InputGroup>
-
-    <InputGroup>
-      <InputGroupAddon>
-        <i class="pi pi-map"></i>
-      </InputGroupAddon>
-      <Select
-        v-model="selectedCity"
-        :options="cities"
-        optionLabel="name"
-        placeholder="City"
-      />
-    </InputGroup>
+  <div class="flex flex-row justify-center">
+    <!-- Full height for the layout -->
+    <main class="main-content">
+      <RouterView />
+    </main>
   </div>
 </template>
 
-<script setup>
-import { ref } from 'vue'
+<style>
+.wrapper {
+  /* Optional: Style your navbar wrapper if needed */
+}
 
-const text1 = ref(null)
-const text2 = ref(null)
-const number = ref(null)
-const selectedCity = ref()
-const cities = ref([
-  { name: 'New York', code: 'NY' },
-  { name: 'Rome', code: 'RM' },
-  { name: 'London', code: 'LDN' },
-  { name: 'Istanbul', code: 'IST' },
-  { name: 'Paris', code: 'PRS' },
-])
-</script>
+.flex {
+  display: flex; /* Use flexbox for layout */
+}
+
+.flex-row {
+  flex-direction: row; /* Ensure children are in a row */
+}
+
+.h-screen {
+  height: 100vh; /* Set height to full viewport */
+}
+
+main {
+  /* Prevent overflow of main content */
+  overflow: hidden; /* Prevent scrolling */
+  display: flex; /* Use flexbox for content alignment */
+  flex-direction: column; /* Allow vertical stacking of RouterView content */
+  height: 100%; /* Full height of the parent */
+}
+
+.main-content {
+  padding: 20px; /* Padding for main content */
+  width: calc(100% - 250px); /* Adjust width based on sidebar width */
+}
+</style>
