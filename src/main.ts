@@ -6,6 +6,8 @@ import PrimeVue from 'primevue/config'
 import Lara from '@primevue/themes/Lara'
 import 'primeicons/primeicons.css'
 import { autoAnimatePlugin } from '@formkit/auto-animate/vue'
+import { VueFire, VueFireAuth } from 'vuefire'
+import { app as firebaseApp } from '@/firebase'
 
 import App from './App.vue'
 import router from './router'
@@ -23,5 +25,13 @@ app.use(PrimeVue, {
   },
 })
 app.use(autoAnimatePlugin)
+app.use(VueFire, {
+  // imported above but could also just be created here
+  firebaseApp,
+  modules: [
+    // we will see other modules later on
+    VueFireAuth(),
+  ],
+})
 
 app.mount('#app')
