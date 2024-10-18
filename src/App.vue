@@ -12,7 +12,7 @@ import Navbar from './components/shared/Navbar.vue'
 
   <div class="flex flex-row justify-center">
     <!-- Full height for the layout -->
-    <main class="main-content">
+    <main class="main-content p-4">
       <RouterView />
     </main>
   </div>
@@ -41,10 +41,5 @@ main {
   display: flex; /* Use flexbox for content alignment */
   flex-direction: column; /* Allow vertical stacking of RouterView content */
   height: 100%; /* Full height of the parent */
-}
-
-.main-content {
-  padding: 20px; /* Padding for main content */
-  width: calc(100% - 250px); /* Adjust width based on sidebar width */
 }
 </style>

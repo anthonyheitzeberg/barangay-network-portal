@@ -2,13 +2,7 @@
   <Menubar :model="items">
     <template #end>
       <div class="flex items-center gap-2">
-        <Avatar
-          icon="pi pi-user"
-          class="mr-2"
-          size="large"
-          style="background-color: #ece9fc; color: #2a1261"
-          shape="circle"
-        />
+        <AvatarMenu />
       </div>
     </template>
   </Menubar>
@@ -17,6 +11,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
+import AvatarMenu from './AvatarMenu.vue'
 
 const router = useRouter()
 const items = ref([

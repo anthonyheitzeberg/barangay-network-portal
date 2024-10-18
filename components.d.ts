@@ -9,6 +9,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     ActualBoxes: typeof import('./src/components/test/ActualBoxes.vue')['default']
     Avatar: typeof import('primevue/avatar')['default']
+    AvatarMenu: typeof import('./src/components/shared/AvatarMenu.vue')['default']
     Button: typeof import('primevue/button')['default']
     Calendar: typeof import('primevue/calendar')['default']
     DatePicker: typeof import('primevue/datepicker')['default']
@@ -29,6 +30,7 @@ declare module 'vue' {
     Panel: typeof import('primevue/panel')['default']
     PanelMenu: typeof import('primevue/panelmenu')['default']
     Password: typeof import('primevue/password')['default']
+    Placeholder: typeof import('./src/components/shared/Placeholder.vue')['default']
     RegistrationForm: typeof import('./src/components/auth/RegistrationForm.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
