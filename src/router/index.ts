@@ -1,19 +1,21 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import AboutView from '../views/AboutView.vue';
-import HealthServicesView from '@/views/services/HealthServicesView.vue';
-import BusinessPermitsView from '@/views/services/BusinessPermitsView.vue';
-import CommunityEventsView from '@/views/services/CommunityEventsView.vue';
-import AnnouncementsView from '@/views/AnnouncementsView.vue';
-import ReportsView from '@/views/ReportsView.vue';
-import EventsView from '@/views/EventsView.vue';
-import ResourcesView from '@/views/ResourcesView.vue';
-import ContactView from '@/views/ContactView.vue';
-import FAQsView from '@/views/FAQsView.vue';
-import FeedbackView from '@/views/FeedbackView.vue';
+import AboutView from '../views/AboutView.vue'
+import HealthServicesView from '@/views/services/HealthServicesView.vue'
+import BusinessPermitsView from '@/views/services/BusinessPermitsView.vue'
+import CommunityEventsView from '@/views/services/CommunityEventsView.vue'
+import AnnouncementsView from '@/views/AnnouncementsView.vue'
+import ReportsView from '@/views/ReportsView.vue'
+import EventsView from '@/views/EventsView.vue'
+import ResourcesView from '@/views/ResourcesView.vue'
+import ContactView from '@/views/ContactView.vue'
+import FAQsView from '@/views/FAQsView.vue'
+import FeedbackView from '@/views/FeedbackView.vue'
+import RegisterView from '@/views/auth/RegisterView.vue'
 
 const routes = [
   { path: '/', component: HomeView },
+  { path: '/auth/register', component: RegisterView },
   { path: '/about', component: AboutView },
   { path: '/services/health', component: HealthServicesView },
   { path: '/services/business', component: BusinessPermitsView },
@@ -25,11 +27,11 @@ const routes = [
   { path: '/contact', component: ContactView },
   { path: '/faqs', component: FAQsView },
   { path: '/feedback', component: FeedbackView },
-];
+]
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  routes
+  routes,
 })
 
 export default router
